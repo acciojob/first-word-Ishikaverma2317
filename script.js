@@ -18,17 +18,3 @@ function firstWord(str) {
   // Otherwise return substring till first space
   return str.substring(0, spaceIndex);
 }
-
-// 📌 Input handling (for platform)
-process.stdin.resume();
-process.stdin.setEncoding("utf-8");
-
-let inputData = "";
-process.stdin.on("data", function (input) {
-  inputData += input;
-});
-
-process.stdin.on("end", function () {
-  inputData = inputData.trim();
-  console.log(firstWord(inputData));
-});
